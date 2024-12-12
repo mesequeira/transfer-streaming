@@ -1,0 +1,6 @@
+﻿services:
+  google.authentication:
+    image: google.authentication
+    build:
+      context: .
+      dockerfile: backend/Google.Authentication/Dockerfile

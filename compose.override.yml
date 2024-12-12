@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  google.authentication:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ProviderAuthenticationOptions__ClientId=${GOOGLE_AUTH_CLIENT_ID}
+      - ProviderAuthenticationOptions__ClientSecret=${GOOGLE_AUTH_CLIENT_SECRET}
+      - ProviderAuthenticationOptions__CallbackPath=${GOOGLE_AUTH_CALLBACK_PATH}
+      - ProviderAuthenticationOptions__RedirectUri=${GOOGLE_AUTH_REDIRECT_URI}
+      - ProviderAuthenticationOptions__SuccessRedirectUri=${GOOGLE_AUTH_SUCCESS_REDIRECT_URI}
+      - ProviderAuthenticationOptions__FailureRedirectUri=${GOOGLE_AUTH_FAILURE_REDIRECT_URI}
+    ports:
+      - "5203:80"
+      - "3000:443" 
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro

@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{539CC58E-E06F-40AE-9225-B9F58783F606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.Authentication", "Spotify.Authentication\Spotify.Authentication.csproj", "{3D894467-7B56-4C0C-8B55-85C13C920F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Authentication", "Google.Authentication\Google.Authentication.csproj", "{53969B6D-CB18-43AC-B410-617651F212F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB29AC6A-2F67-4415-98C8-369E7AED262A}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+		..\compose.yaml = ..\compose.yaml
+		..\compose.override.yml = ..\compose.override.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming.SharedKernel", "Streaming.SharedKernel\Streaming.SharedKernel.csproj", "{EBEF9E4A-D512-43C5-BA99-B329C2167BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming.Result", "Streaming.Result\Streaming.Result.csproj", "{48AC4194-5CC6-48E2-81A0-E821E9EEA32F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steaming.Messaging", "Steaming.Messaging\Steaming.Messaging.csproj", "{80790C05-E864-4834-B076-244F2A0C087C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D894467-7B56-4C0C-8B55-85C13C920F8B} = {539CC58E-E06F-40AE-9225-B9F58783F606}
+		{53969B6D-CB18-43AC-B410-617651F212F4} = {539CC58E-E06F-40AE-9225-B9F58783F606}
+		{EBEF9E4A-D512-43C5-BA99-B329C2167BAA} = {539CC58E-E06F-40AE-9225-B9F58783F606}
+		{48AC4194-5CC6-48E2-81A0-E821E9EEA32F} = {539CC58E-E06F-40AE-9225-B9F58783F606}
+		{80790C05-E864-4834-B076-244F2A0C087C} = {539CC58E-E06F-40AE-9225-B9F58783F606}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D894467-7B56-4C0C-8B55-85C13C920F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D894467-7B56-4C0C-8B55-85C13C920F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D894467-7B56-4C0C-8B55-85C13C920F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D894467-7B56-4C0C-8B55-85C13C920F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53969B6D-CB18-43AC-B410-617651F212F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53969B6D-CB18-43AC-B410-617651F212F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53969B6D-CB18-43AC-B410-617651F212F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53969B6D-CB18-43AC-B410-617651F212F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBEF9E4A-D512-43C5-BA99-B329C2167BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBEF9E4A-D512-43C5-BA99-B329C2167BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBEF9E4A-D512-43C5-BA99-B329C2167BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBEF9E4A-D512-43C5-BA99-B329C2167BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48AC4194-5CC6-48E2-81A0-E821E9EEA32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48AC4194-5CC6-48E2-81A0-E821E9EEA32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48AC4194-5CC6-48E2-81A0-E821E9EEA32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48AC4194-5CC6-48E2-81A0-E821E9EEA32F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80790C05-E864-4834-B076-244F2A0C087C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80790C05-E864-4834-B076-244F2A0C087C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80790C05-E864-4834-B076-244F2A0C087C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80790C05-E864-4834-B076-244F2A0C087C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
