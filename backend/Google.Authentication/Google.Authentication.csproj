@@ -24,10 +24,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Authentication\Abstractions\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Steaming.Messaging\Steaming.Messaging.csproj" />
       <ProjectReference Include="..\Streaming.SharedKernel\Streaming.SharedKernel.csproj" />
     </ItemGroup>

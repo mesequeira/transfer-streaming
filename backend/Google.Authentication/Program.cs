@@ -1,6 +1,7 @@
 using Carter;
 using FluentValidation;
-using Google.Authentication.Authentication.Abstractions.Extensions;
+using Google.Authentication.Extensions;
+using Streaming.SharedKernel.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,20 +13,34 @@ builder.Services.AddMediatR(configurator =>
     configurator.RegisterServicesFromAssembly(typeof(Program).Assembly);
 });
 builder.Services.AddGoogleAuthentication();
+builder.Services.AddSharedRateLimiter();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UsePathBase("/google");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
-    app.UseSwaggerUI(options =>
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
     {
-        options.SwaggerEndpoint("/openapi/v1.json", "Google.Authentication v1");
+        c.RoutePrefix = "swagger";
+        c.SwaggerEndpoint("v1/swagger.json", "Name");
     });
+    
+}
+else
+{
+    app.UsePathBase(new PathString("/" + "google"));
 }
 
+
+//app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapCarter();
-app.UseHttpsRedirection();
+
 await app.RunAsync();

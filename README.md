@@ -13,7 +13,7 @@ Si es la primera vez que usamos `ngrok`, este utiliza un archivo de configuraci√
   El archivo debe estar en:
 
   ```bash
-  C:\Users<TuUsuario>.ngrok2\ngrok.yml
+  C:\Users\<TU_USUARIO>\AppData\Local\ngrok
   ```
 
     - **Mac/Linux**:  

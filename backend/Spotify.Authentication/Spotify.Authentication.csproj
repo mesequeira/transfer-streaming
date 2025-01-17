@@ -5,16 +5,34 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <UserSecretsId>67204112-2224-4923-9fd7-30d4c2dcff18</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Mapster" Version="7.4.0" />
+        <PackageReference Include="MediatR" Version="12.4.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0"/>
+        <PackageReference Include="Carter" Version="9.0.0" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+        <PackageReference Include="AspNet.Security.OAuth.Spotify" Version="9.0.0" />
+        <PackageReference Include="SpotifyAPI.Web" Version="7.2.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Steaming.Messaging\Steaming.Messaging.csproj" />
+      <ProjectReference Include="..\Streaming.Result\Streaming.Result.csproj" />
+      <ProjectReference Include="..\Streaming.SharedKernel\Streaming.SharedKernel.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Authentication\" />
     </ItemGroup>
 
 </Project>

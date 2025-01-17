@@ -12,8 +12,34 @@ services:
       - ProviderAuthenticationOptions__SuccessRedirectUri=${GOOGLE_AUTH_SUCCESS_REDIRECT_URI}
       - ProviderAuthenticationOptions__FailureRedirectUri=${GOOGLE_AUTH_FAILURE_REDIRECT_URI}
     ports:
-      - "5203:80"
-      - "3000:443" 
+      - "3007:443"
+      - "3002:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    networks:
+      - my_network      
+
+  spotify.authentication:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ProviderAuthenticationOptions__ClientId=${SPOTIFY_AUTH_CLIENT_ID}
+      - ProviderAuthenticationOptions__ClientSecret=${SPOTIFY_AUTH_CLIENT_SECRET}
+      - ProviderAuthenticationOptions__CallbackPath=${SPOTIFY_AUTH_CALLBACK_PATH}
+      - ProviderAuthenticationOptions__RedirectUri=${SPOTIFY_AUTH_REDIRECT_URI}
+      - ProviderAuthenticationOptions__SuccessRedirectUri=${SPOTIFY_AUTH_SUCCESS_REDIRECT_URI}
+      - ProviderAuthenticationOptions__FailureRedirectUri=${SPOTIFY_AUTH_FAILURE_REDIRECT_URI}
+      - CorsOptions__Url=${SPOTIFY_CORS_URL}
+    ports:
+      - "3001:443"
+      - "3003:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    external: true

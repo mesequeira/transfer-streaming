@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 		..\compose.yaml = ..\compose.yaml
 		..\compose.override.yml = ..\compose.override.yml
+		..\.env = ..\.env
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming.SharedKernel", "Streaming.SharedKernel\Streaming.SharedKernel.csproj", "{EBEF9E4A-D512-43C5-BA99-B329C2167BAA}"

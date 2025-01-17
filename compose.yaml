@@ -4,3 +4,9 @@
     build:
       context: .
       dockerfile: backend/Google.Authentication/Dockerfile
+  
+  spotify.authentication:
+    image: spotify.authentication
+    build:
+      context: .
+      dockerfile: backend/Spotify.Authentication/Dockerfile
